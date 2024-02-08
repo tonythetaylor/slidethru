@@ -21,7 +21,6 @@ const basename = path.basename(__filename);
 const env = process.env.NODE_ENV || "development";
 const config = example[env];
 // const db = {};
-console.log("DEBUG : ", config);
 let sequelize;
 if (config.use_env_variable) {
   sequelize = new Sequelize(process.env[config.use_env_variable], config);
@@ -43,8 +42,6 @@ fs.readdirSync(__dirname)
     // eslint-disable-next-line global-require,import/no-dynamic-require
     // const model = require(path.join(__dirname, file)).default(sequelize, Sequelize.DataTypes);
     const model = sequelize.define(path.join(__dirname, file));
-    console.log("MODEL : ", model);
-    console.log(`\n \x1b[31m DEBUG : MODEL ${model} \x1b[0m \n`);
     db[model.name] = model;
   });
 
@@ -56,5 +53,4 @@ Object.keys(db).forEach((modelName) => {
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
-console.log(Object.keys(db))
 export default db;

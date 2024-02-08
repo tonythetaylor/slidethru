@@ -2,7 +2,6 @@ version: "3.9"
 
 services:
   backend:
-    container_name: backend_chat
     build:
       dockerfile: Dockerfile.dev
     volumes:
@@ -19,9 +18,25 @@ services:
       - PG_HOST=postgres
     depends_on:
       - postgres
+    networks: 
+      - node-network
+    tty: true
+  
+  frontend:
+    stdin_open: true
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./frontend
+    volumes:
+      - /app/node_modules
+      - ./frontend:/app
+    tty: true
+    networks: 
+      - node-network
 
   postgres:
-    container_name: postgres_chat
     image: postgres:12
     ports:
       - "5432:5432"
@@ -32,6 +47,25 @@ services:
     user: postgres
     volumes:
       - postgres_data:/var/lib/postgresql/data
+    networks: 
+      - node-network
+
+  nginx:
+    depends_on:
+      - backend
+      - frontend
+    restart: always
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./nginx
+    ports:
+      - "3051:80"
+    networks: 
+      - node-network
 
 volumes:
   postgres_data: {}
+
+networks: 
+  node-network:
+    driver: bridge

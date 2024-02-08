@@ -44,7 +44,6 @@ export const getUser = (req, res, next) => {
 //create user
 export const signup = async (req, res, next) => {
   const { fullName, username, password, confirmedPassword, gender } = req.body;
-  console.log(fullName, username, password, confirmedPassword, gender);
   // verify passwords matches
   if (password !== confirmedPassword)
     return res.status(400).json({ error: "Passwords do no match!" });

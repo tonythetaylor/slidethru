@@ -1,5 +1,8 @@
 import Conversation from "../models/conversation.model.js";
 import Message from "../models/message.model.js";
+
+import { getReceiverSocketId, io } from "../socket/socket.js";
+
 import User from "../models/user.model.js";
 import db from "../models/index.js";
 
@@ -41,11 +44,17 @@ export const sendMessage = async (req, res) => {
       },
       { where: { _id: conversation._id } }
     );
-    console.log(conversation.messages);
     // await conversation.save();
     await Promise.all([conversation, newMessage.save()]);
 
-    res.status(201).json("Message sent succesfully ");
+     // SOCKET IO FUNCTIONALITY WILL GO HERE
+		const receiverSocketId = getReceiverSocketId(receiverId);
+		if (receiverSocketId) {
+			// io.to(<socket_id>).emit() used to send events to specific client
+			io.to(receiverSocketId).emit("newMessage", newMessage);
+		}
+
+    res.status(201).json(newMessage);
   } catch (error) {
     console.log("Create chatroom error:", error);
     res.status(500).json({ err: "Internal Server Error" });
