@@ -25,7 +25,7 @@ const Conversation = ({ conversation, lastIdx, emoji }) => {
         <div className="flex flex-col flex-1">
           <div className="flex gap-3 justify-between">
             <p className="font-bold text-gray-200">{conversation.fullName}</p>
-            <span className="text-xl">{emoji}</span>
+            <span className="flex items-center justify-center ml-auto text-white bg-red-500 p-3 h-4 w-6 rounded leading-none text-xl">2</span>
           </div>
         </div>
       </div>

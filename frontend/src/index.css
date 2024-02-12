@@ -3,11 +3,17 @@
 @tailwind utilities;
 
 body {
-	/* background: linear-gradient(#7a79c7b7, #313145b7); */
-	background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("/bg.jpg");
-	background-repeat: no-repeat;
+	background: linear-gradient(#aeaeae, #191919);
+	/* background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("/bg.jpg"); */
+	 background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
+	/*overflow: hidden;
+	margin: 0;
+	padding: 0;
+	height: 100%; */
+	margin: 0px; 
+	padding-right: 0px;
 }
 
 /* dark mode looking scrollbar */

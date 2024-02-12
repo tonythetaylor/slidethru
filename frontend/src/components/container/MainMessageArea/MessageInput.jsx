@@ -14,7 +14,7 @@ const MessageInput = () => {
   };
 
   return (
-    <form className="px-4 py-4 my-3" onSubmit={handleSubmit}>
+    <form className="px-4 my-3" onSubmit={handleSubmit}>
       <div className="w-full relative">
         {/* <input
 					type='text'
@@ -23,7 +23,7 @@ const MessageInput = () => {
 					value={message}
 					onChange={(e) => setMessage(e.target.value)}
 				/> */}
-        <div className="flex flex-row items-center h-16 rounded-xl bg-slate-200 w-full px-4 relative  bottom-11 bg-opacity-5">
+        <div className="flex flex-row items-center h-16 rounded-xl bg-white w-full px-4 relative  bottom-11">
           <div>
             <button className="flex items-center justify-center text-gray-400 hover:text-gray-600">
               <svg
@@ -54,7 +54,7 @@ const MessageInput = () => {
             </div>
           </div>
           <div className="ml-4">
-            <button className="flex items-center justify-center bg-slate-500 hover:bg-indigo-600 rounded-xl text-white px-4 py-1 flex-shrink-0">
+            <button className="flex items-center justify-center bg-indigo-500 hover:bg-indigo-600 rounded-xl text-white px-4 py-1 flex-shrink-0">
               {loading ? (
                 <div className="loading loading-spinner"></div>
               ) : (
