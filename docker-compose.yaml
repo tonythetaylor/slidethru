@@ -4,6 +4,7 @@ services:
   backend:
     build:
       dockerfile: Dockerfile.dev
+      context: ./backend
     volumes:
       - /app/node_modules
       - ./package.json:/app/package.json
