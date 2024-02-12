@@ -1,8 +1,8 @@
 import React from "react";
 import MessageStage from "./MessageStage";
 import SideBarContainer from "../SideBarContainer";
-import NavBar from "../../navbar/Navbar";
-import MessageContainer from "../../messages/MessageContainer";
+// import NavBar from "../../navbar/Navbar";
+// import MessageContainer from "../../messages/MessageContainer";
 
 const MainConversationContainer = () => {
   return (

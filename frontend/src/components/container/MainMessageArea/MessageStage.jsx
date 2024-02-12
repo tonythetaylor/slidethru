@@ -1,7 +1,7 @@
 import React from "react";
 import MessageInput from "../../messages/MessageInput";
-import MessageContainer from "../../messages/MessageContainer";
-import NavBar from "../../navbar/Navbar";
+// import MessageContainer from "../../messages/MessageContainer";
+// import NavBar from "../../navbar/Navbar";
 import Messages from "./MainMessages";
 const MessageStage = () => {
   return (

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import SideBarConversations from "./SidebarConversations";
+// import SideBarConversations from "./SidebarConversations";
 import SideBarBio from "./SideBarBio";
-import SideBarArchived from "./SideBarArchived";
-import NavBar from "../navbar/Navbar";
+// import SideBarArchived from "./SideBarArchived";
+// import NavBar from "../navbar/Navbar";
 import { SideBarNav } from "./SideBarNav";
 import LogoutButton from "../sidebar/LogoutButton";
 import { SideBarNavMobile } from "./SideBarNavMobile";
