@@ -61,6 +61,8 @@ services:
       context: ./nginx
     ports:
       - "3051:80"
+    volumes:
+    - ./nginx/public:/var/www/html
     networks: 
       - node-network
 
