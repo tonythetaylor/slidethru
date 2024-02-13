@@ -15,7 +15,7 @@ export const SocketContextProvider = ({ children }) => {
 
 	useEffect(() => {
 		if (authUser) {
-			const socket = io("http://ec2-34-235-126-225.compute-1.amazonaws.com:5005", {
+			const socket = io("https://ec2-34-235-126-225.compute-1.amazonaws.com:5005", {
 				query: {
 					userId: authUser._id,
 				},
