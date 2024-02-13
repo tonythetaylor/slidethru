@@ -16,6 +16,8 @@ dist-ssr
 *.crt
 *.key
 
+test
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
