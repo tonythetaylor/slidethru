@@ -15,7 +15,7 @@ import { app, server } from "./socket/socket.js";
 const __dirname = path.resolve();
 
 var corsOptions = {
-  origin: "http://localhost:3051"
+  origin: "http://34.228.65.92:3051"
 };
 
 app.use(cors(corsOptions));
