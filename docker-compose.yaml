@@ -17,6 +17,7 @@ services:
       - PG_USER=postgres
       - PG_PASSWORD=postgres
       - PG_HOST=postgres
+      - JWT_SECRET=bLR66DXsRMW+rVCv7sBC48V18do2XsIp1d+l/cLyaro=
     depends_on:
       - postgres
     networks: 
