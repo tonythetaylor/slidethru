@@ -5,7 +5,6 @@ import Login from "./pages/login/Login";
 import SignUp from "./pages/signup/SignUp";
 import { Toaster } from "react-hot-toast";
 import { useAuthContext } from "./context/AuthContext";
-import NavBar from "./components/navbar/Navbar";
 // import MainContainer from "./components/container/mainContainer";
 // import MainSidebarContainer from "./components/container/SideBarContainer";
 // import MainConversationContainer from "./components/container/MainMessageArea/MainConversationContainer";
@@ -15,6 +14,7 @@ import NavBar from "./components/navbar/Navbar";
 // import MessageStage from "./components/container/MainMessageArea/MessageStage";
 // import MessageContainer from "./components/container/messages/MessageContainer";
 import { useState } from "react";
+import NavBar from "./components/navbar/Navbar";
 
 function App() {
   const { authUser } = useAuthContext();
