@@ -62,8 +62,11 @@ services:
       context: ./nginx
     ports:
       - "3051:80"
+      - "443:443"
     volumes:
-    - ./nginx/public:/var/www/html
+      - ./nginx/build:/usr/share/nginx/html
+      # - ./certs/ssl_certificate.crt:/etc/nginx/ssl
+      # - ./certs/ssl_certificate.key:/etc/nginx/ssl
     networks: 
       - node-network
 
