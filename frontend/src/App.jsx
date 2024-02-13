@@ -6,14 +6,14 @@ import SignUp from "./pages/signup/SignUp";
 import { Toaster } from "react-hot-toast";
 import { useAuthContext } from "./context/AuthContext";
 import NavBar from "./components/navbar/Navbar";
-import MainContainer from "./components/container/mainContainer";
-import MainSidebarContainer from "./components/container/SideBarContainer";
-import MainConversationContainer from "./components/container/MainMessageArea/MainConversationContainer";
-import SideBarBio from "./components/container/SideBarBio";
-import SideBarConversations from "./components/container/SidebarConversations";
-import SideBarContainer from "./components/container/SideBarContainer";
-import MessageStage from "./components/container/MainMessageArea/MessageStage";
-import MessageContainer from "./components/container/messages/MessageContainer";
+// import MainContainer from "./components/container/mainContainer";
+// import MainSidebarContainer from "./components/container/SideBarContainer";
+// import MainConversationContainer from "./components/container/MainMessageArea/MainConversationContainer";
+// import SideBarBio from "./components/container/SideBarBio";
+// import SideBarConversations from "./components/container/SidebarConversations";
+// import SideBarContainer from "./components/container/SideBarContainer";
+// import MessageStage from "./components/container/MainMessageArea/MessageStage";
+// import MessageContainer from "./components/container/messages/MessageContainer";
 import { useState } from "react";
 
 function App() {
