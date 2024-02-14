@@ -10,7 +10,7 @@ services:
       - ./package.json:/app/package.json
       - ./backend:/app
     env_file:
-      - ./backend.env
+      - ./backend/backend.env
     image: node
     ports:
       - "5005:5005"
