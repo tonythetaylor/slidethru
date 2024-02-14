@@ -60,7 +60,7 @@ services:
       - frontend
     restart: always
     build:
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.dev
       context: ./nginx
     ports:
       - "3051:80"
