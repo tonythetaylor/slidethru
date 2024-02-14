@@ -1,5 +1,5 @@
 FROM node:lts-alpine3.19
-ENV NODE_ENV production
+ENV NODE_ENV development
 WORKDIR /app
 COPY ./package.json ./
 RUN npm i

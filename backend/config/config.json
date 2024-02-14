@@ -14,10 +14,10 @@
     "dialect": "postgres"
   },
   "production": {
-    "username": "postgres",
-    "password": "postgres",
-    "database": "chat_app_db",
-    "host": "postgres",
+    "username": "root",
+    "password": null,
+    "database": "chat_app_db_production",
+    "host": "127.0.0.3",
     "dialect": "postgres"
   }
 }
