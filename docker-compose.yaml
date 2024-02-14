@@ -9,17 +9,15 @@ services:
       - /app/node_modules
       - ./package.json:/app/package.json
       - ./backend:/app
-    env_file:
-      - ./backend/backend.env
     image: node
     ports:
       - "5005:5005"
     environment:
-      - PG_DB=${PG_DB}
-      - PG_USER=${PG_USER}
-      - PG_PASSWORD=${PG_PASSWORD}
-      - PG_HOST=${PG_HOST}
-      - JWT_SECRET=${JWT_SECRET}
+      - PG_DB=chat_app_db
+      - PG_USER=postgres
+      - PG_PASSWORD=postgres
+      - PG_HOST=postgres
+      - JWT_SECRET=bLR66DXsRMW+rVCv7sBC48V18do2XsIp1d+l/cLyaro=
     depends_on:
       - postgres
     networks: 
@@ -47,14 +45,12 @@ services:
     ports:
       - "5432:5432"
     environment:
-      - POSTGRES_DB=${PG_DB}
-      - POSTGRES_USER=${PG_USER}
-      - POSTGRES_PASSWORD=${PG_PASSWORD}
+      - POSTGRES_DB=chat_app_db
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
     user: postgres
     volumes:
       - postgres_data:/var/lib/postgresql/data
-    env_file:
-      - ./backend/backend.env
     networks: 
       - node-network
 
