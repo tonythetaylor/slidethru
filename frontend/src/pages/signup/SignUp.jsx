@@ -24,20 +24,25 @@ const SignUp = () => {
 	};
 
 	return (
-		<div className='flex flex-col items-center justify-center min-w-96 mx-auto h-full'>
-			<div className='w-full p-6 rounded-lg shadow-md bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0'>
-				<h1 className='text-3xl font-semibold text-center text-gray-300'>
-					Join <span className='text-blue-500'> Slidethru</span>
-				</h1>
+		<div className="hero min-h-screen bg-[#191919]">
+		<div className="hero-content text-center">
+		  <div className="">
+			<h1 className="text-xl font-bold">Hello there 👋🏻</h1>
+			<h1 className="text-3xl font-semibold text-center text-gray-300">
+			Join <span className='text-blue-500'> Slidethru</span>
 
-				<form onSubmit={handleSubmit}>
+			</h1>
+			<p className="py-6">
+			  Join the conversation, meet new people, and make connections in one
+			  shared room.
+			</p>
+
+				<form onSubmit={handleSubmit} className="flex flex-col space-y-4">
 					<div>
-						<label className='label p-2'>
-							<span className='text-base label-text'>Full Name</span>
-						</label>
+					
 						<input
 							type='text'
-							placeholder='John Doe'
+							placeholder='Full Name'
 							className='w-full input input-bordered  h-10'
 							value={inputs.fullName}
 							onChange={(e) => setInputs({ ...inputs, fullName: e.target.value })}
@@ -45,12 +50,10 @@ const SignUp = () => {
 					</div>
 
 					<div>
-						<label className='label p-2 '>
-							<span className='text-base label-text'>Username</span>
-						</label>
+					
 						<input
 							type='text'
-							placeholder='johndoe'
+							placeholder='Username'
 							className='w-full input input-bordered h-10'
 							value={inputs.username}
 							onChange={(e) => setInputs({ ...inputs, username: e.target.value })}
@@ -58,9 +61,7 @@ const SignUp = () => {
 					</div>
 
 					<div>
-						<label className='label'>
-							<span className='text-base label-text'>Password</span>
-						</label>
+						
 						<input
 							type='password'
 							placeholder='Enter Password'
@@ -71,9 +72,7 @@ const SignUp = () => {
 					</div>
 
 					<div>
-						<label className='label'>
-							<span className='text-base label-text'>Confirm Password</span>
-						</label>
+						
 						<input
 							type='password'
 							placeholder='Confirm Password'
@@ -83,7 +82,7 @@ const SignUp = () => {
 						/>
 					</div>
 
-					<GenderCheckbox onCheckboxChange={handleCheckboxChange} selectedGender={inputs.gender} />
+					<GenderCheckbox onCheckboxChange={handleCheckboxChange} selectedGender={inputs.gender}  className="" />
 
 					<Link
 						to={"/login"}
@@ -94,12 +93,13 @@ const SignUp = () => {
 					</Link>
 
 					<div>
-						<button className='btn btn-block btn-sm mt-2 border border-slate-700' disabled={loading}>
+						<button className='btn btn-block btn-sm mt-2 border border-slate-700 bg-cyan-900' disabled={loading}>
 							{loading ? <span className='loading loading-spinner'></span> : "Sign Up"}
 						</button>
 					</div>
 				</form>
 			</div>
+		</div>
 		</div>
 	);
 };

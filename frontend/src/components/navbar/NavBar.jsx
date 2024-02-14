@@ -1,5 +1,6 @@
 import { useState } from "react";
 import SearchInput from "../sidebar/SearchInput";
+import useLogout from "../../hooks/useLogout";
 // import { close, logo, menu } from "../../assets/";
 
 export const navLinks = [
@@ -24,6 +25,7 @@ export const navLinks = [
 const NavBar = () => {
   const [active, setActive] = useState("Home");
   const [toggle, setToggle] = useState(false);
+  const {logout} = useLogout()
 
   return (
     <nav className="w-full flex py-4 top-0 bg-[#191919] justify-between items-center navbar">
@@ -73,7 +75,15 @@ const NavBar = () => {
               >
                 <a href={`#${nav.id}`}>{nav.title}</a>
               </li>
+              
             ))}
+              <li
+                key="logout"
+                className="font-poppins font-medium cursor-pointer text-[16px]"
+                onClick={logout}
+              >
+                Logout  
+              </li>
           </ul>
         </div>
       </div>

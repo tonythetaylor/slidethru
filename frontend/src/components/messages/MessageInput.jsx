@@ -14,8 +14,8 @@ const MessageInput = () => {
   };
 
   return (
-    <form className="px-4 py-4 my-3" onSubmit={handleSubmit}>
-      <div className="w-full relative">
+    <form className="px-4 py-2 my-3" onSubmit={handleSubmit}>
+      {/* <div className="flex items-center"> */}
         {/* <input
 					type='text'
 					className='border text-sm rounded-lg block w-full p-2.5  bg-gray-700 border-gray-600 text-white'
@@ -46,7 +46,8 @@ const MessageInput = () => {
             <div className="relative w-full">
               <input
                 type="text"
-                className="border text-sm rounded-lg block w-full p-2.5  bg-gray-700 border-gray-600 text-white"
+                // className="border text-sm rounded-lg block w-full p-2.5  bg-gray-700 border-gray-600 text-white"
+				className="w-full border rounded-full py-2 px-4 mr-2"
                 placeholder="Send a message"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
@@ -54,7 +55,8 @@ const MessageInput = () => {
             </div>
           </div>
           <div className="ml-4">
-            <button className="flex items-center justify-center bg-slate-500 hover:bg-indigo-600 rounded-xl text-white px-4 py-1 flex-shrink-0">
+            {/* <button className="flex items-center justify-center bg-slate-500 hover:bg-indigo-600 rounded-xl text-white px-4 py-1 flex-shrink-0"> */}
+			<button className="bg-blue-500 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-full">
               {loading ? (
                 <div className="loading loading-spinner"></div>
               ) : (
@@ -63,7 +65,7 @@ const MessageInput = () => {
             </button>
           </div>
         </div>
-      </div>
+      {/* </div> */}
     </form>
   );
 };

@@ -14,7 +14,8 @@ const MessageContainer = () => {
 	}, [setSelectedConversation]);
 
 	return (
-		<div className='md:min-w-[450px] flex flex-col h-screen w-screen'>
+		// <div className='md:min-w-[450px] flex flex-col h-screen w-screen'>
+		<div className="h-screen flex flex-col flex-1">
 			{!selectedConversation ? (
 				<NoChatSelected />
 			) : (
@@ -36,7 +37,7 @@ export default MessageContainer;
 const NoChatSelected = () => {
 	const { authUser } = useAuthContext();
 	return (
-		<div className='flex items-center justify-center w-screen h-screen'>
+		<div className='flex items-center justify-center h-screen flex-col flex-1'>
 			<div className='px-4 text-center sm:text-lg md:text-xl text-gray-200 font-semibold flex flex-col items-center gap-2'>
 				<p>Welcome 👋 {authUser.fullName}</p>
 				<p>Select a chat to start messaging</p>
