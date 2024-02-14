@@ -18,7 +18,7 @@ const example = require("../config/config.json");
 // const json = JSON.parse(await readFile(new URL('../../config.json', import.meta.url)));
 
 const basename = path.basename(__filename);
-const env = process.env.NODE_ENV || "development";
+const env = process.env.NODE_ENV || "production";
 const config = example[env];
 // const db = {};
 let sequelize;

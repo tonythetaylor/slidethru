@@ -17,7 +17,7 @@
     "username": "postgres",
     "password": "postgres",
     "database": "chat_app_db",
-    "host": "http://34.235.126.225:5432",
+    "host": "postgres",
     "dialect": "postgres"
   }
 }
